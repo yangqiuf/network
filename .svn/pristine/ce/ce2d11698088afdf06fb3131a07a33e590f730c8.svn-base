@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- 若您需要使用Kendo UI Professional，请联系版权人获得合法的授权或许可。 -->
+    <!-- Bootstrap css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <!-- kendo ui css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.default.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <!--蓝鲸提供的公用样式库 -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk_pack.css" rel="stylesheet">
+    <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <!-- 包括所有kendoui的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/js/kendo.all.min.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/bk/js/bk.js"></script>
+    <!-- 数据埋点统计 -->
+    <script src="http://magicbox.bk.tencent.com/static_api/analysis.js"></script>
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if lt IE 9]><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/html5shiv.min.js"></script><script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/respond.min.js"></script><![endif]-->
+</head>
+
+<body class="bg-white" data-bg-color="bg-white">
+    <div class="king-page-box">
+        <div class="king-layout1-header">
+            <div class="king-block king-block-bordered king-block-themed m0">
+                <div class="king-block-header king-info">
+                    <ul class="king-block-options">
+                        <li>
+                            <!-- <button type="button"><i class="fa fa-cog"></i></button> -->
+                        </li>
+                    </ul>
+                    <h3 class="king-block-title">安全自动化应用</h3>
+                </div>
+                <div class="king-block-content p0"></div>
+            </div>
+        </div>
+        <div class="king-layout1-main clearfix">
+            <!-- sidebar start -->
+            <div class="king-layout1-sidebar" style="width:216px;">
+                <nav style="height:100%;" class="   f14">
+                    <div class="king-vertical-nav4">
+                        <div class="sidebar-inner">
+                            <ul class="navi">
+                                <li class="has_submenu current open c-open active">
+                                    <a href="javascript:void(0);"> <i class="fa fa-gear ">                        </i>
+                                        <span>首页</span>
+                                        <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="sub-menu"> </ul>
+                                </li>
+                                <li class="has_submenu current open c-open">
+                                    <a href="javascript:void(0);"> <i class="fa fa-wrench ">                        </i>
+                                        <span>基础扫描检测</span>
+                                        <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0);">漏洞扫描<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                        <li><a href="javascript:void(0);">基线扫描<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has_submenu current open c-open">
+                                    <a href="javascript:void(0);"> <i class="fa fa-tasks ">                        </i>
+                                        <span>安全设备联动</span>
+                                        <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:void(0);">安全设备管理<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                        <li><a href="javascript:void(0);">设备智能联动<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has_submenu current open c-open">
+                                    <a href="javascript:void(0);"> <i class="fa fa-tasks ">                        </i>
+                                        <span>统计报表管理</span>
+                                        <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="">漏洞统计<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                        <li><a href="">基线统计<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                        <li><a href="">安全事件统计<i class="fa fa-chevron-right pull-right"></i></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- sidebar end -->
+            <!-- content start -->
+            <div class="king-content-wrap">
+                <div class="king-layout1-content" style="margin-left: 216px;">
+                    <form class="form-horizontal">
+                        <div class="king-block king-block-bordered king-block-themed mb0">
+                            <div class="king-block-header king-gray-dark">
+                                <ul class="king-block-options">
+                                    <li>
+                                        <!-- <button type="button"><i class="fa fa-cog"></i></button> -->
+                                    </li>
+                                </ul>
+                                <h3 class="king-block-title">命令执行测试</h3>
+                            </div>
+                            <div class="king-block-content">
+                                <div class="form-group ">
+                                    <label>输入命令：</label>
+                                    <input type="text" class="form-control" id="" placeholder=""> </div>
+                                <div class="form-group clearfix">
+                                    <div class="col-sm-9 col-sm-offset-3">
+                                        <button type="button" class="king-btn mr10  king-success">提交</button>
+                                        <button type="button" class="king-btn king-default ">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <table class="table mb0 pr15 ranger-box ">
+                        <thead>
+                            <tr>
+                                <th style="width: 100px;">#</th>
+                                <th style="width: 20%;">设备名称</th>
+                                <th style="width: 20%;">设备ip</th>
+                                <th style="width: 20%;">设备状态</th>
+                                <th>所属业务</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width: 100px;">1</td>
+                                <td style="width: 20%;">Nginx</td>
+                                <td style="width: 20%;">172.50.20.21</td>
+                                <td style="width: 20%;">在线</td>
+                                <td>蓝鲸</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px;">2</td>
+                                <td style="width: 20%;">DB</td>
+                                <td style="width: 20%;">172.50.20.22</td>
+                                <td style="width: 20%;">在线</td>
+                                <td>蓝鲸</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px;">3</td>
+                                <td style="width: 20%;">PaaS</td>
+                                <td style="width: 20%;">172.50.20.23</td>
+                                <td style="width: 20%;">在线</td>
+                                <td>蓝鲸</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 设置面板Start -->
+                    <template id="header_tpl_1535124906921">
+                        <tr>
+                            <th style="width: 100px;">#index#</th>
+                            <th style="width: 20%;">#task#</th>
+                            <th style="width: 20%;">#progress#</th>
+                            <th style="width: 20%;">#host#</th>
+                            <th>#date#</th>
+                        </tr>
+                    </template>
+                    <template id="tpl_1535124906921">
+                        <tr>
+                            <td style="width: 100px;">#index#</td>
+                            <td style="width: 20%;">#columnName1#</td>
+                            <td style="width: 20%;">#columnName2#</td>
+                            <td style="width: 20%;">#columnName3#</td>
+                            <td>#columnName4#</td>
+                        </tr>
+                    </template>
+                    <!-- 设置面板End -->
+                </div>
+            </div>
+            <!-- content end -->
+        </div>
+    </div>
+    <script>
+        $(function(){
+             var li = $('.navi li');
+             li.each(function(){
+             $(this).click(function(){
+             if( $(this).hasClass('c-open')){
+                $(this).find('ul').slideUp(350);
+                $(this).removeClass('c-open');
+             }else{
+               $(this).find('ul').slideDown(350);
+               $(this).addClass('c-open');
+               }
+              })
+           });
+        })
+    </script>
+    <script>
+        $(function(){
+                function renderTpl(str, cfg) {
+                    var re = /(#(.+?)#)/g;
+
+                    return str.replace(re, function() {
+                        var val = cfg[arguments[2]]+'';
+                        if(typeof val == 'undefined') {
+                            val = '';
+                        }
+                        return val;
+                    });
+                }
+
+                // 异步请求后台数据
+                $.ajax({
+                    url: 'https://magicbox.bk.tencent.com/static_api/v3/components/table6/data.json',
+                    type: 'GET',
+                    success: function(res){
+                        var _html = ' ';
+                        var list = res.items;
+                        var tpl = $('#tpl_1535124906921').html();
+                        var headerTpl =  $('#header_tpl_1535124906921').html();
+                        for (var i=0,len=list.length; i < len; i++){
+                            var item = list[i];
+                            _html += renderTpl(tpl, item)
+                        }
+                        $('#code_1535124906921 tbody').html(_html);
+                        $('.ranger-box thead').html(renderTpl(headerTpl,res.catalogues));
+                    }
+                });
+            });
+    </script>
+</body>
+
+</html>
